@@ -17,6 +17,8 @@ This project meets all the requirement as shown in the video
 
 ![](path_planning.gif)
 
+![](path_planning_new.gif)
+
 
 ## Implementation
 
