@@ -325,7 +325,6 @@ int main() {
               double vy = sensor_fusion[i][4];
               double check_speed = sqrt(vx*vx + vy*vy);
               double check_car_s = sensor_fusion[i][5];
-              
               check_car_s +=((double)prev_size*0.02*check_speed);
               
               // check my car is following too close to other cars
@@ -464,7 +463,6 @@ int main() {
           
 
           
-          
           /* 
           Smooth the path
           */
@@ -569,19 +567,22 @@ int main() {
           
           for(int i =1; i<=50-previous_path_x.size(); i++)
           {
-//             if(too_close)
-//             {
-//             if  ( (!safe_change_left) && (!safe_change_left) )
-//             {
-//               // quick slow down if the car is following too close to other cars and changing lane is not safe
-//               ref_vel -=0.224;
-//             }
-//             }
-//             else if ( ref_vel<49.5)
-//             {
-//              // fast accelerate if the car is not following too close to other cars and the speed is below the target speed 
-//             ref_vel +=0.224;
-//             }
+            /*
+            Fast accelerate or Slow down
+            if(too_close)
+            {
+            if  ( (!safe_change_left) && (!safe_change_left) )
+            {
+              // quick slow down if the car is following too close to other cars and changing lane is not safe
+              ref_vel -=0.224;
+            }
+            }
+            else if ( ref_vel<49.5)
+            {
+             // fast accelerate if the car is not following too close to other cars and the speed is below the target speed 
+            ref_vel +=0.224;
+            }
+             */
               
             
 			double N = (target_dist/(0.02*ref_vel/2.24)); // N is bigger than 50
