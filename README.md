@@ -7,7 +7,7 @@ The goal of this project is to implement a  C++ path planning  algorithm to  saf
 
 Several requirements from Udaciy are listed as follows.
 
-* * The car should try to go as close as possible to the 50 MPH speed limit
+* The car should try to go as close as possible to the 50 MPH speed limit
 * The car should avoid collision
 * The car should drive inside the lane, except for changing lanes
 * The car should not experience total acceleration over 10 m/s^2 and jerk that is greater than 10 m/s^3
